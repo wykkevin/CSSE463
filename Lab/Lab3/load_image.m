@@ -1,0 +1,17 @@
+clear;
+clc;
+img=imread('jznb.jpg');
+imgg=rgb2gray(img);
+[hori,veti,sum,grad,edge,clean_edge]=sobel(imgg);
+imtool(uint8(hori*8));
+%imwrite(uint8(hori*8),'hori.png');
+imtool(uint8(veti*8));
+%imwrite(uint8(veti*8),'veti.png');
+imtool(uint8(sum*8));
+%imwrite(uint8(sum*8),'sum.png');
+imtool(uint8(grad*8));
+%imwrite(uint8(grad*8),'grad.png');
+imtool(uint8((edge+pi)*255/2/pi));
+%imwrite(uint8((edge+pi)*255/2/pi),'edgepi.png');
+imtool(uint8((clean_edge+pi)*255/2/pi));
+%imwrite(uint8((clean_edge+pi)*255/2/pi),'clean-edge.png');

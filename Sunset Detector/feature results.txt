@@ -1,0 +1,6 @@
+alexnet: gpu
+fc8, 92.5% 49s
+fc7, 93.8% 47s
+fc9, 93.8% 63s
+
+resnet50: cpu, gpu will out of memory
